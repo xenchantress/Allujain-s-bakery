@@ -1,25 +1,40 @@
-import logo from './logo.svg';
-import './App.css';
+import logo from "./logo.svg";
+import "./App.css";
 
-function App() {
+export default function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div>
+      <Gallery />
     </div>
   );
 }
 
-export default App;
+function Profile() {
+  return (
+    <div>
+      <div className="container" style={{ height: "80vh", overflow: "hidden" }}>
+        <img
+          src="https://images.pexels.com/photos/205961/pexels-photo-205961.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+          alt="Allujain's Bakery"
+          style={{ width: "90vw", height: "100vh" }}
+        />
+      </div>
+    </div>
+  );
+}
+
+function Gallery() {
+  return (
+    <div>
+      <div>
+        <div className="container">
+          <h1>Allujain's Bakery</h1>
+        </div>
+        <div className="container">
+          <p>This is a Danish Bakery</p>
+        </div>
+      </div>
+      <Profile />
+    </div>
+  );
+}
